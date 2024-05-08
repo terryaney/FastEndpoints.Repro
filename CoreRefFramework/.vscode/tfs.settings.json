@@ -1,0 +1,11 @@
+{
+	"MyKeep": {
+		"settings": {
+			"build": {
+				"exclude": [ 
+					"Camelot.Api.Excel.Tests.Integration.csproj" 
+				]
+			}
+		}
+	}
+}

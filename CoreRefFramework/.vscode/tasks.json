@@ -1,0 +1,99 @@
+{
+	"version": "2.0.0",
+	"inputs": [
+		{
+			"id": "dependentCommitStatus",
+			"type": "command",
+			"command": "extension.commandvariable.pickStringRemember",
+			"args": {
+				"description": "Dependent library commit status?",
+				"options": [
+					{ "label": "Require all libraries to be synced", "value": "synced" },
+					{ "label": "Use latest code from TFS", "value": "latest" }
+				]
+			}
+		},
+		{
+			"id": "buildType",
+			"type": "pickString",
+			"description": "Select the build configuration",
+			"options": [
+				"Debug",
+				"Release"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"label": "build Api Excel Contracts",
+			"isBuildCommand": true,
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build", "${workspaceFolder}\\Contracts\\Camelot.Abstractions.Api.Contracts.Excel.csproj",
+				"-c", "${input:buildType}",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"presentation": {
+				"clear": true,
+				"echo": false,
+				"showReuseMessage": false
+			},
+			"problemMatcher": "$msCompile"
+		},
+
+		{
+			"label": "build Excel Api",
+			"isBuildCommand": true,
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build", "${workspaceFolder}/Api/src/Camelot.Api.Excel.csproj",
+				"-c", "${input:buildType}",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"presentation": {
+				"clear": true,
+				"echo": false,
+				"showReuseMessage": false
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build Excel Integration Tests",
+			"isBuildCommand": true,
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build", "${workspaceFolder}/Api/tests/Integration/Camelot.Api.Excel.Tests.Integration.csproj",
+				"-c", "${input:buildType}",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"presentation": {
+				"clear": true,
+				"echo": false,
+				"showReuseMessage": false
+			},
+			"problemMatcher": "$msCompile"
+		},
+
+		{
+			"label": "debug",
+			"hide": true,
+			"command": "dotnet",
+			"type": "process",
+			"presentation": {
+				"clear": true
+			},
+			"args": [
+				"build", "${workspaceFolder}\\Api\\src\\Camelot.Api.Excel.csproj",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"problemMatcher": "$msCompile"
+		}
+	]
+}

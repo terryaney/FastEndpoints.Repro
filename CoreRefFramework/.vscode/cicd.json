@@ -1,0 +1,53 @@
+{
+  "information": "When this file is checked in it automatically triggers a CI/CD pipeline to build and publish of NuGet package.",
+  "queued": [
+    {
+      "date": "2024-05-07T20:30:34.650422Z",
+      "requestedBy": "terry.aney"
+    },
+    {
+      "date": "2024-05-07T15:22:11.0279371Z",
+      "requestedBy": "terry.aney"
+    },
+    {
+      "date": "2024-05-04T20:57:51.3899633Z",
+      "requestedBy": "terry.aney"
+    },
+    {
+      "date": "2024-05-03T12:02:18.6240779Z",
+      "requestedBy": "terry.aney"
+    },
+    {
+      "date": "2024-04-24T15:02:21.5490368Z",
+      "requestedBy": "terry.aney"
+    },
+    {
+      "date": "2024-04-23T03:18:35.4426859Z",
+      "requestedBy": "terry.aney"
+    },
+    {
+      "date": "2024-04-23T03:10:22.7361777Z",
+      "requestedBy": "terry.aney"
+    },
+    {
+      "date": "2024-04-18T23:06:26.1453804Z",
+      "requestedBy": "terry.aney"
+    },
+    {
+      "date": "2024-04-18T23:01:32.4624915Z",
+      "requestedBy": "terry.aney"
+    },
+    {
+      "date": "2024-03-31T18:00:18.1284477Z",
+      "requestedBy": "terry.aney"
+    },
+    {
+      "date": "2024-03-29T21:58:33.4050153Z",
+      "requestedBy": "terry.aney"
+    },
+    {
+      "date": "2024-03-29T17:26:31.8029499Z",
+      "requestedBy": "terry.aney"
+    }
+  ]
+}

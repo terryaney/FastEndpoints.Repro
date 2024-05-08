@@ -1,0 +1,26 @@
+﻿{
+	"$schema": "https://json.schemastore.org/launchsettings.json",
+	"profiles": {
+		"Local": {
+			"commandName": "Project",
+			"dotnetRunMessages": true,
+			"launchBrowser": true,
+			"applicationUrl": "https://localhost:5011",
+			"environmentVariables": {
+				"ASPNETCORE_ENVIRONMENT": "Development",
+				"CAMELOT_SECRETS_ENVIRONMENT": "DEVELOPMENT"
+			}
+		},
+		"Swagger": {
+			"commandName": "Project",
+			"dotnetRunMessages": true,
+			"launchBrowser": true,
+			"applicationUrl": "https://localhost:5011",
+			"launchUrl": "swagger",
+			"environmentVariables": {
+				"ASPNETCORE_ENVIRONMENT": "Development",
+				"CAMELOT_SECRETS_ENVIRONMENT": "DEVELOPMENT"
+			}
+		}
+	}
+}

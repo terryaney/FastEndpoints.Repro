@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>KAT.Camelot.Abstractions.Api.Contracts.Excel</RootNamespace>
+    <AssemblyName>KAT.Camelot.Abstractions.Api.Contracts.Excel</AssemblyName>
+    <KATVersionPrefix>1.0.*</KATVersionPrefix>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FastEndpoints.Attributes" Version="5.11.0" />
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>KAT.Camelot.Api.Excel</RootNamespace>
+		<AssemblyName>KAT.Camelot.Api.Excel</AssemblyName>
+		<KATVersionPrefix>1.0.*</KATVersionPrefix>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="FastEndpoints" Version="5.11.0" />
+		<PackageReference Include="FastEndpoints.Security" Version="5.11.0" />
+		<PackageReference Include="FastEndpoints.Swagger" Version="5.11.0" />
+		<PackageReference Include="Hangfire.Core" Version="1.8.12" />
+		<PackageReference Include="Hangfire.SqlServer" Version="1.8.12" />
+		<PackageReference Include="InterpolatedSql.Dapper" Version="2.3.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Contracts\Camelot.Abstractions.Api.Contracts.Excel.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="BTR.Evolution.Hangfire.Schedulers">
+			<HintPath>..\..\Assemblies\BTR.Evolution.Hangfire.Schedulers.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>
