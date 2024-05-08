@@ -102,6 +102,7 @@ public partial class Endpoint : CamelotEndpoint<FileUploadRequest, string>
 		var hangfireConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;Integrated Security=SSPI;Initial Catalog=HangfireDB;";
 		HF.JobStorage.Current = new HF.SqlServer.SqlServerStorage( hangfireConnection );
 
+		// Comment out call to Hangfire and SendStringAsync to test the endpoint without Hangfire/.NET Framework
 		var hangfireId = HF.BackgroundJob.Enqueue( () => 
 			new BTR.Evolution.Hangfire.Schedulers.JobInvoker().Invoke(
 				$"Email Blast From {authId}",

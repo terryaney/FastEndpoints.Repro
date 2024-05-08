@@ -1,11 +1,5 @@
-using FluentAssertions;
-using FluentAssertions.Json;
-using Contracts = KAT.Camelot.Abstractions.Api.Contracts.Excel;
-using Microsoft.AspNetCore.Mvc;
-using System.Net;
 using Xunit;
-using System.Text.Json.Nodes;
-using KAT.Camelot.Testing.Integration;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Camelot.Api.Excel.Tests.Integration.UtilityEndpointTests;
 
@@ -24,6 +18,27 @@ public class GetTests : IClassFixture<ApiFactory>
 	{
 		// Arrange
 		await Task.Delay( 1 );
+
+		// Act
+
+		// Assert 
+	}
+}
+
+[TestClass]
+public class GetMSTests
+{
+	private readonly ApiFactory factory;
+	public GetMSTests( ApiFactory factory )
+	{
+		this.factory = factory;
+	}
+
+	[TestMethod]
+	public async Task Get_ReturnsValidation_WhenParametersMissing_MSTest()
+	{
+		// Arrange
+		await Task.Delay(1);
 
 		// Act
 
